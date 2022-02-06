@@ -25,11 +25,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 39px 46px 41px 34px;
+  padding: 30px;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 320px) {
+    width: 300px;
+    height: 581px;
+  }
+
+  @media screen and (min-width: 480px) {
     width: 450px;
-    height: 609px;
+
+    padding: 39px 46px 41px 34px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -97,7 +103,11 @@
   height: 342px;
   margin-bottom: 20px;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 320px) {
+    width: 240px;
+  }
+
+  @media screen and (min-width: 450px) {
     width: 370px;
   }
 
@@ -181,8 +191,15 @@
 
 .agreement {
   font-style: normal;
-  letter-spacing: 0.03em;
-  @media screen and (max-width: 1199px) {
+
+  @media screen and (min-width: 320px) {
+    letter-spacing: 0.02em;
+    font-size: 8px;
+    line-height: 1.16;
+  }
+
+  @media screen and (min-width: 480px) {
+    letter-spacing: 0.03em;
     font-size: 12px;
     line-height: 1.16;
   }
@@ -203,7 +220,11 @@
 
   justify-content: space-between;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 320px) {
+    width: 240px;
+  }
+
+  @media screen and (min-width: 480px) {
     width: 370px;
   }
 
@@ -249,13 +270,19 @@
 
 .agreement__contract {
   font-style: normal;
-  letter-spacing: 0.03em;
   text-decoration: none;
 
   color: $accent-color;
   border-bottom: 1px solid #2196f3;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 320px) {
+    font-size: 8px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+  }
+
+  @media screen and (min-width: 480px) {
+    letter-spacing: 0.03em;
     font-size: 12px;
     line-height: 1.16;
   }
