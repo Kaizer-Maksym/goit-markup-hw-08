@@ -10,15 +10,14 @@
 .button-list {
   @extend %list;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
 
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    justify-content: start;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-  }
+  margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     justify-content: center;
+
     margin-bottom: 50px;
   }
 }
@@ -28,7 +27,7 @@
     margin-right: 8px;
   }
 
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     &:nth-child(-n + 3) {
       margin-bottom: 15px;
     }
@@ -78,8 +77,12 @@
 .card-set {
   @extend %list;
   display: flex;
-
   flex-wrap: wrap;
+
+  @media screen and (max-width: 479px) {
+    align-items: center;
+    justify-content: center;
+  }
 
   @media screen and (min-width: 768px) {
     margin: -15px;
@@ -88,13 +91,13 @@
 
 .card-set__item {
   &:not(:last-child) {
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    flex-basis: calc((100% - 2 * 30px) / 2);
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
 
@@ -155,7 +158,7 @@
 
 .card-set__container {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .product-overlay {

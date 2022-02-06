@@ -61,51 +61,78 @@
         </button>
       </div>
       <div class="menu-container js-menu-container" id="mobile-menu">
-        <button type="button" class="menu-toggle js-close-menu">
-          <svg width="40" height="40">
-            <use href="./images/icons.svg#menu-close"></use>
-          </svg>
-        </button>
-        <nav>
-          <ul class="mobile-nav">
-            <li class="mobile-nav__item">
-              <a href="./index.html" class="mobile-nav__link mobile-nav__link--current">Студия</a>
-            </li>
-            <li class="mobile-nav__item">
-              <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
-            </li>
-            <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Контакты</a></li>
-          </ul>
-        </nav>
-        <ul class="mobile-contacts">
-          <li class="mobile-contacts__item">
-            <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--phone">
-              +38 096 111 11 11
-            </a>
-          </li>
-          <li class="mobile-contacts__item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="mobile-contacts__link mobile-contacts__link--mail"
-            >
-              info@devstudio.com
-            </a>
-          </li>
-        </ul>
-        <ul class="mobile-networks">
-          <li class="mobile-networks__item">
-            <a href="" class="mobile-networks__link">Instagram</a>
-          </li>
-          <li class="mobile-networks__item">
-            <a href="" class="mobile-networks__link">Twitter</a>
-          </li>
-          <li class="mobile-networks__item">
-            <a href="" class="mobile-networks__link">Facebook</a>
-          </li>
-          <li class="mobile-networks__item">
-            <a href="" class="mobile-networks__link">LinkedIn</a>
-          </li>
-        </ul>
+        <div class="mobile-container">
+          <div class="mobile-container__top">
+            <button type="button" class="menu-toggle js-close-menu menu-toggle--close">
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#menu-close"></use>
+              </svg>
+            </button>
+            <nav>
+              <ul class="mobile-nav">
+                <li class="mobile-nav__item">
+                  <a href="./index.html" class="mobile-nav__link mobile-nav__link--current"
+                    >Студия</a
+                  >
+                </li>
+                <li class="mobile-nav__item">
+                  <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
+                </li>
+                <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mobile-container__bottum">
+            <ul class="mobile-contacts">
+              <li class="mobile-contacts__item">
+                <a
+                  href="tel:+380961111111"
+                  class="mobile-contacts__link mobile-contacts__link--phone"
+                >
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="mobile-contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-contacts__link mobile-contacts__link--mail"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mobile-networks">
+              <li class="mobile-networks__item">
+                <a href="" class="mobile-networks__link">
+                  <svg width="85" height="22">
+                    <use href="./images/icons.svg#icon-instagram-link"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-networks__item">
+                <a href="" class="mobile-networks__link">
+                  <svg width="59" height="22">
+                    <use href="./images/icons.svg#icon-twitter-link"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-networks__item">
+                <a href="" class="mobile-networks__link">
+                  <svg width="81" height="22">
+                    <use href="./images/icons.svg#icon-facebook-link"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-networks__item">
+                <a href="" class="mobile-networks__link">
+                  <svg width="71" height="22">
+                    <use href="./images/icons.svg#icon-linkedIn-link"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -173,20 +200,34 @@
         <h2 class="title work__heading">Чем мы занимаемся</h2>
         <ul class="grid list">
           <li class="grid__item">
-            <img
-              src="./images/1.jpg"
-              alt="Разработка программного обеспечения"
-              width="370"
-              height="294"
-            />
+            <picture>
+              <source
+                srcset="./images/1.jpg 1x, ./images/1-2x.jpg 2x"
+                media="(min-width: 1200px)"
+              />
+              <img src="./images/1.jpg" alt="Разработка программного обеспечения" />
+            </picture>
             <div class="performance"><p class="performance__text">Десктопные приложения</p></div>
           </li>
           <li class="grid__item">
-            <img src="./images/2.jpg" alt="Дизайн интерфейса" width="370" height="294" />
+            <picture>
+              <source
+                srcset="./images/2.jpg 1x, ./images/2-2x.jpg 2x"
+                media="(min-width: 1200px)"
+              />
+              <img src="./images/2.jpg" alt="Дизайн интерфейса" />
+            </picture>
+
             <div class="performance"><p class="performance__text">Мобильные приложения</p></div>
           </li>
           <li class="grid__item">
-            <img src="./images/3.jpg" alt="Визуальное оформление" width="370" height="294" />
+            <picture>
+              <source
+                srcset="./images/3.jpg 1x, ./images/3-2x.jpg 2x"
+                media="(min-width: 1200px)"
+              />
+              <img src="./images/3.jpg" alt="Визуальное оформление" />
+            </picture>
             <div class="performance"><p class="performance__text">Дизайнерские решения</p></div>
           </li>
         </ul>
@@ -197,7 +238,21 @@
           <h2 class="team__heading title">Наша команда</h2>
           <ul class="developers list">
             <li class="developers__item">
-              <img src="./images/pd.jpg" alt="Игорь Демьяненко" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/pd.jpg 1x, ./images/pd-desk-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/pd-tab-1x.jpg 1x, ./images/pd-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/pd-mob-1x.jpg 1x, ./images/pd-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/pd.jpg" alt="Игорь Демьяненко" />
+              </picture>
               <h3 class="developers__name">Игорь Демьяненко</h3>
               <p lang="en" class="developers__position">Product Designer</p>
               <div class="media-cintainer">
@@ -234,7 +289,21 @@
               </div>
             </li>
             <li class="developers__item">
-              <img src="./images/fd.jpg" alt="Ольга Репина" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/fd.jpg 1x, ./images/fd-desk-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/fd-tab-1x.jpg 1x, ./images/fd-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/fd-mob-1x.jpg 1x, ./images/fd-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/fd.jpg" alt="Ольга Репина" />
+              </picture>
               <h3 class="developers__name">Ольга Репина</h3>
               <p lang="en" class="developers__position">Frontend Developer</p>
               <div class="media-container">
@@ -271,7 +340,21 @@
               </div>
             </li>
             <li class="developers__item">
-              <img src="./images/marketing.jpg" alt="Николай Тарасов" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/marketing.jpg 1x, ./images/marketing-desk-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/marketing-tab-1x.jpg 1x, ./images/marketing-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/marketing-mob-1x.jpg 1x, ./images/marketing-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/marketing.jpg" alt="Николай Тарасов" />
+              </picture>
               <h3 class="developers__name">Николай Тарасов</h3>
               <p lang="en" class="developers__position">Marketing</p>
               <div class="media-container">
@@ -308,7 +391,21 @@
               </div>
             </li>
             <li class="developers__item">
-              <img src="./images/ui.jpg" alt="Михаил Ермаков" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/ui.jpg 1x, ./images/ui-desk-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/ui-tab-1x.jpg 1x, ./images/ui-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/ui-mob-1x.jpg 1x, ./images/ui-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/ui.jpg" alt="Михаил Ермаков" />
+              </picture>
               <h3 class="developers__name">Михаил Ермаков</h3>
               <p lang="en" class="developers__position">UI Designer</p>
               <div class="media-container">

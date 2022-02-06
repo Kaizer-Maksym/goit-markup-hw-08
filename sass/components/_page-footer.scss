@@ -19,7 +19,7 @@
 }
 
 .address-container {
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     text-align: center;
     margin-bottom: 60px;
   }
@@ -55,10 +55,8 @@
 }
 
 .address-set__item {
-  @media screen and (min-width: 480px) {
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 8px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -90,11 +88,7 @@
 /* -----------------------Social networks-------------------------- */
 
 .footer-networks {
-  margin-right: auto;
-  margin-left: auto;
-
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-right: 0;
     margin-left: 165px;
   }
 
@@ -107,6 +101,7 @@
 }
 
 .footer-networks__appeal {
+  margin-top: 0;
   margin-bottom: 20px;
   font-style: normal;
   font-weight: 700;
@@ -117,8 +112,7 @@
 
   color: $white-color;
 
-  @media screen and (min-width: 480px) {
-    margin-top: 0;
+  @media screen and (max-width: 767px) {
     text-align: center;
   }
 
@@ -135,17 +129,14 @@
   align-items: center;
   justify-content: center;
 
-  @media screen and (min-width: 480px) {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     margin-bottom: 0;
   }
 
   @media screen and (min-width: 1200px) {
     width: 206px;
-    margin-bottom: 0;
   }
 }
 
@@ -199,20 +190,16 @@
 }
 
 .footer-form__appeal {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
+  text-align: center;
   color: $white-color;
-
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 20px;
-    margin-top: 0;
-    text-align: center;
-  }
 
   @media screen and (min-width: 1200px) {
     position: absolute;
@@ -228,7 +215,9 @@
   height: 50px;
 
   padding: 15px 16px 15px 16px;
-  margin-right: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
 
   background-color: var(--primery-bg-color);
 
@@ -252,15 +241,13 @@
     color: $footer-tx-color;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 480px) {
     width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 20px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 358px;
+    margin: 0;
   }
 }
 
@@ -286,6 +273,9 @@
   @media screen and (max-width: 1199px) {
     margin-right: auto;
     margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
   }
 }
 
